@@ -1,0 +1,545 @@
+<!-- Header & Sticky Navigation -->
+<header class="navbar" [class.navbar-scrolled]="isNavbarScrolled">
+  <div class="navbar-container">
+    <div class="logo" (click)="scrollTo('home')" style="cursor: pointer;">
+      <div class="logo-icon">
+        <i class="fa-solid fa-leaf"></i>
+      </div>
+      <div class="logo-text">
+        <h1>Sellappa Siddha</h1>
+        <p>Ayurvedic Hospital</p>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li class="nav-item" [class.active]="activeSection === 'home'">
+        <a (click)="scrollTo('home')">Home</a>
+      </li>
+      <li class="nav-item" [class.active]="activeSection === 'about'">
+        <a (click)="scrollTo('about')">About Us</a>
+      </li>
+      <li class="nav-item" [class.active]="activeSection === 'treatments'">
+        <a (click)="scrollTo('treatments')">Treatments</a>
+      </li>
+      <li class="nav-item" [class.active]="activeSection === 'contact'">
+        <a (click)="scrollTo('contact')">Location & Contact</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- ==========================================
+     MAIN BROCHURE / ADVERTISEMENT WEBSITE
+     ========================================== -->
+<div>
+
+  <!-- HERO ADVERTISEMENT BANNER -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h2>Siddha & Ayurveda Heritage</h2>
+        <h1 class="hero-title">Ancient Wisdom for Vibrant Health & Longevity</h1>
+        <p class="hero-description">
+          Experience customized natural therapies under the professional supervision of
+          <strong>Dr. T. Sarmilan</strong>. We specialized in restoring the body's natural dosha balance through pure
+          herbal solutions.
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" (click)="scrollTo('treatments')">
+            <i class="fa-solid fa-mortar-pestle"></i> Explore Treatments
+          </button>
+          <button class="btn btn-outline-white" (click)="scrollTo('contact')">
+            <i class="fa-solid fa-location-dot"></i> Contact Hospital
+          </button>
+        </div>
+
+        <div class="hero-badge-container">
+          <div class="hero-badge">
+            <i class="fa-solid fa-award"></i>
+            <div class="hero-badge-text">
+              <h4>Dr. T. Sarmilan</h4>
+              <p>Chief Siddha Physician</p>
+            </div>
+          </div>
+          <div class="hero-badge">
+            <i class="fa-solid fa-check-double"></i>
+            <div class="hero-badge-text">
+              <h4>100% Herbal</h4>
+              <p>Natural Organic Remedies</p>
+            </div>
+          </div>
+          <div class="hero-badge">
+            <i class="fa-solid fa-house-medical"></i>
+            <div class="hero-badge-text">
+              <h4>Inuvil, Jaffna</h4>
+              <p>Traditional Clinic Location</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Decorative Elements -->
+      <div class="hero-visual">
+        <div class="ayurvedic-mandala">
+          <i class="fa-solid fa-spa"
+            style="color: var(--color-accent); font-size: 3rem; animation: rotateMandala 60s linear infinite reverse;"></i>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-icon">
+              <i class="fa-solid fa-briefcase-medical"></i>
+            </div>
+            <h3>Specialized Care</h3>
+          </div>
+          <p>We treat Vatha/Pitha disorders, chronic joint pain, skin diseases, allergies, and deliver specialized child
+            care therapies.</p>
+        </div>
+
+        <div class="hero-card-floating-2">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <h4>0770423696</h4>
+            <p>Direct Hot Line</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE THREE DOSHAS PHILOSOPHY -->
+  <section class="philosophy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ayurvedic Core Principles</span>
+        <h2 class="section-title">Balancing Vatha, Pitha & Kapha</h2>
+        <p class="section-subtitle">According to Siddha and Ayurveda, health is a state of equilibrium between the three
+          bodily humors. Our treatments address root imbalances rather than just symptoms.</p>
+      </div>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <i class="fa-solid fa-wind"></i>
+          </div>
+          <h3>Vatha (Air & Ether)</h3>
+          <p>Controls movement, circulation, and breathing. When unbalanced, it causes joint stiffness, arthritis, dry
+            skin, anxiety, and digestive discomfort. We neutralize Vatha imbalances with warming herbal oil therapies.
+          </p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <i class="fa-solid fa-fire"></i>
+          </div>
+          <h3>Pitha (Fire & Water)</h3>
+          <p>Governs digestion, body temperature, and metabolism. Unbalanced Pitha manifests as inflammatory skin
+            rashes, acidity, chronic allergies, and irritability. We offer cooling therapies to soothe excess heat.</p>
+        </div>
+
+        <div class="philosophy-card">
+          <div class="philosophy-icon">
+            <i class="fa-solid fa-droplet"></i>
+          </div>
+          <h3>Kapha (Earth & Water)</h3>
+          <p>Governs structure, lubrication, and immune resilience. Excess Kapha leads to congestion, weight gain,
+            asthma, respiratory illnesses, and lethargy. We provide revitalizing herbal remedies to restore balance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTOR BIO SHOWCASE -->
+  <section id="about" class="doctor-section">
+    <div class="container doctor-grid">
+      <div class="doctor-image-wrapper">
+        <div class="doctor-frame">
+          <div class="doctor-img-placeholder">
+            <div class="doctor-avatar-circle">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <h3 style="color: var(--color-accent); font-size: 1.8rem; margin-bottom: 8px;">Dr. T. Sarmilan</h3>
+            <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; font-family: var(--font-sans);">
+              DAM<br>
+              Chief Consultant Physician
+            </p>
+          </div>
+          <div class="doctor-badge-overlay">
+            <h4>10+ Years</h4>
+            <p>Clinical Experience</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-content">
+        <span class="section-tag">Expert Practitioner</span>
+        <h3>Meet Dr. T. Sarmilan</h3>
+        <p class="doctor-title">Chief Physician of Sellappa Siddha Ayurvedic Hospital</p>
+
+        <p class="doctor-bio">
+          Dr. T. Sarmilan is a highly distinguished and experienced practitioner of Siddha and Ayurvedic medicine. Under
+          his visionary guidance, Sellappa Siddha Ayurvedic Hospital in Inuvil has emerged as a trusted sanctuary for
+          patients seeking natural recovery, wellness, and preventative healthcare in the Northern Province.
+        </p>
+
+        <p class="doctor-bio">
+          He is dedicated to preserving traditional diagnostic techniques, such as pulse diagnosis (Naadi Pariksha), and
+          combining them with highly tailored, organic formulations to tackle complex chronic diseases, children's
+          health, and structural conditions.
+        </p>
+
+        <div class="doctor-philosophy">
+          "Nature holds the primary pharmacy. By aligning our bodily energies (Doshas) with native flora and therapeutic
+          physical care, we can activate profound healing mechanisms within."
+        </div>
+
+        <div class="specialties-list">
+          <div class="specialty-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Pediatric Siddha Care (Balachikitsa)</span>
+          </div>
+          <div class="specialty-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Neurological & Joint Pain Therapy</span>
+          </div>
+          <div class="specialty-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Skin Diseases & Allergies</span>
+          </div>
+          <div class="specialty-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Stress & Rejuvenation Massages</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TREATMENT ADVERTISEMENT SHOWCASE -->
+  <section id="treatments" class="treatments-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Therapeutic Services</span>
+        <h2 class="section-title">Our Specialized Treatments</h2>
+        <p class="section-subtitle">
+          From children's illnesses to adult chronic ailments, explore our comprehensive menu of completely natural
+          treatments and healing massages.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="treatment-filters">
+        <button *ngFor="let cat of categories" class="filter-btn" [class.active]="activeCategory === cat"
+          (click)="filterByCategory(cat)">
+          {{ cat }}
+        </button>
+      </div>
+
+      <!-- Loading State -->
+      <div *ngIf="isLoadingTreatments" style="text-align: center; padding: 60px 0;">
+        <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 3rem; color: var(--color-accent);"></i>
+        <p style="margin-top: 16px; color: var(--color-text-muted); font-weight: 600;">Fetching treatments from hospital
+          registry...</p>
+      </div>
+
+      <!-- Treatments Grid -->
+      <div *ngIf="!isLoadingTreatments" class="treatments-grid">
+        <div *ngFor="let tr of filteredTreatments" class="treatment-card">
+          <div class="treatment-image-placeholder">
+            <span class="treatment-category-badge">{{ tr.category }}</span>
+            <i class="fa-solid" [class.fa-spa]="tr.id === 'abhyangam'"
+              [class.fa-droplet-degrip]="tr.id === 'shirodhara'" [class.fa-child]="tr.id === 'balachikitsa'"
+              [class.fa-hand-holding-medical]="tr.id === 'vatha-arthritis'"
+              [class.fa-seedling]="tr.id === 'skin-allergy'" [class.fa-yin-yang]="tr.id === 'kayakalpa'">
+            </i>
+          </div>
+
+          <div class="treatment-body">
+            <h3 class="treatment-card-title">{{ tr.name }}</h3>
+            <p class="treatment-card-desc">{{ tr.description }}</p>
+          </div>
+
+          <button class="treatment-card-btn" (click)="openTreatmentDetails(tr)">
+            View Detailed Benefits <i class="fa-solid fa-arrow-right-long" style="font-size: 0.8rem;"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MID-PAGE PHONE CALL ADVERTISEMENT -->
+  <section class="ad-banner">
+    <div class="container ad-banner-content">
+      <h2>Seeking Immediate Relief or Consultation?</h2>
+      <p>
+        To preserve authentic diagnostics, Dr. T. Sarmilan offers personalized consultations at the hospital clinic.
+        Contact us directly to reserve your therapeutic consultation or discuss custom herbal options.
+      </p>
+      <div>
+        <a href="tel:0770423696" class="ad-phone-number">
+          <i class="fa-solid fa-phone-volume"></i> 0770423696
+        </a>
+      </div>
+      <p style="margin-top: 16px; font-size: 0.95rem; color: var(--color-accent); font-weight: 700;">
+        Open: Mon - Thu & Sat - Sun (4:00 PM - 6:00 PM) • Friday Closed • Inuvil, Jaffna
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT & GEOGRAPHICAL LOCATION SHOWCASE -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-grid">
+
+      <!-- Info Panel -->
+      <div class="contact-info-panel">
+        <div>
+          <span class="section-tag font-sans">Reach Us Directly</span>
+          <h2 class="section-title">Hospital Address & Contacts</h2>
+          <p class="section-subtitle">We are conveniently located in the peaceful neighborhood of Inuvil, Jaffna, Sri
+            Lanka.</p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <div class="contact-item-details">
+                <h4>Our Address</h4>
+                <p>Sellappa Siddha Ayurvedic Hospital,<br>Kanthaswamy Kovilady, Inuvil,<br>Jaffna, Sri Lanka.</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-phone-flip"></i>
+              </div>
+              <div class="contact-item-details">
+                <h4>Call Doctor Directly</h4>
+                <p><a href="tel:0770423696" style="font-weight: 700; color: var(--color-primary);">0770423696</a>
+                  (Mobile)</p>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted);">Consultations, Treatment inquiries,
+                  Massages bookings</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div class="contact-item-details">
+                <h4>Clinic Hours</h4>
+                <p><strong>Mon – Thu & Sat – Sun:</strong> 4:00 PM – 6:00 PM</p>
+                <p><strong>Friday:</strong> Closed (Friday Leave)</p>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted);">Open on Public Holidays by appointment
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulated Map Component -->
+        <div class="map-container">
+          <div class="simulated-map">
+            <div class="map-grid-lines"></div>
+            <div class="map-road-1"></div>
+            <div class="map-road-2"></div>
+
+            <div class="map-hospital-marker">
+              <i class="fa-solid fa-location-pin marker-pin"></i>
+              <div class="marker-label">Sellappa Siddha Hospital</div>
+            </div>
+
+            <div class="marker-info-box">
+              <strong>Kanthaswamy Kovilady, Inuvil</strong><br>
+              Directly next to Kanthaswamy Temple grounds. 5 mins drive from Kandy Road.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Inquiry Form -->
+      <div class="contact-form-panel">
+        <h3 class="form-title">Send a Question</h3>
+        <p class="form-subtitle">Need advice on treatments or child care? Write your questions below and Dr. Sarmilan
+          will respond.</p>
+
+        <form (ngSubmit)="submitContactForm()" #contactForm="ngForm">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name *</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Sivakumar Ratnam"
+              [(ngModel)]="contactData.name" required />
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. 0770423696"
+                [(ngModel)]="contactData.phone" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="e.g. siva@gmail.com"
+                [(ngModel)]="contactData.email" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="subject">Topic of Inquiry</label>
+            <select id="subject" name="subject" class="form-input" [(ngModel)]="contactData.subject">
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Massage Treatments">Ayurvedic Massage Therapy</option>
+              <option value="Children Disease Care">Pediatric/Child Care (Balachikitsa)</option>
+              <option value="Joint Pain Therapy">Joint & Arthritis Pain Relief</option>
+              <option value="Skin Allergy Remedy">Skin Diseases & Allergies</option>
+              <option value="Other Ailments">Other Conditions</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Your Message *</label>
+            <textarea id="message" name="message" class="form-input"
+              placeholder="Describe symptoms or write details here..." [(ngModel)]="contactData.message"
+              required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn" [disabled]="isSubmittingForm || !contactForm.form.valid">
+            <i class="fa-solid fa-paper-plane" *ngIf="!isSubmittingForm"></i>
+            <i class="fa-solid fa-circle-notch fa-spin" *ngIf="isSubmittingForm"></i>
+            {{ isSubmittingForm ? 'Submitting Question...' : 'Submit Inquiry' }}
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- ==========================================
+     TREATMENT DETAILS POPUP / MODAL OVERLAY
+     ========================================== -->
+<div class="modal-overlay" [class.active]="selectedTreatment !== null" (click)="closeTreatmentDetails()">
+  <div class="modal-content" (click)="$event.stopPropagation()" *ngIf="selectedTreatment !== null">
+    <div class="modal-header-visual">
+      <button class="modal-close-btn" (click)="closeTreatmentDetails()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <i class="fa-solid" [class.fa-spa]="selectedTreatment.id === 'abhyangam'"
+        [class.fa-droplet-degrip]="selectedTreatment.id === 'shirodhara'"
+        [class.fa-child]="selectedTreatment.id === 'balachikitsa'"
+        [class.fa-hand-holding-medical]="selectedTreatment.id === 'vatha-arthritis'"
+        [class.fa-seedling]="selectedTreatment.id === 'skin-allergy'"
+        [class.fa-yin-yang]="selectedTreatment.id === 'kayakalpa'">
+      </i>
+    </div>
+
+    <div class="modal-body">
+      <span class="modal-category">{{ selectedTreatment.category }}</span>
+      <h3 class="modal-title">{{ selectedTreatment.name }}</h3>
+      <p class="modal-desc">{{ selectedTreatment.description }}</p>
+
+      <h4 class="modal-section-title">Key Therapeutic Benefits</h4>
+      <ul class="modal-benefits-list">
+        <li *ngFor="let benefit of selectedTreatment.benefits">{{ benefit }}</li>
+      </ul>
+
+      <div style="margin-top: 30px; text-align: center;">
+        <button class="btn btn-primary" (click)="closeTreatmentDetails(); scrollTo('contact')" style="width: 100%;">
+          <i class="fa-solid fa-phone"></i> Inquire About This Treatment
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==========================================
+     GLOBAL FOOTER
+     ========================================== -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <!-- Column 1: Hospital Profile -->
+    <div class="footer-logo">
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+        <div class="logo-icon" style="background-color: var(--color-accent); color: var(--color-primary-dark);">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <h2 style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--color-white);">
+          Sellappa Siddha
+        </h2>
+      </div>
+      <p
+        style="color: var(--color-accent); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; font-weight: 700;">
+        Ayurvedic Hospital
+      </p>
+      <p class="footer-about-text">
+        Dedicated to serving the Inuvil and Jaffna communities with classical, side-effect-free treatments.
+        Under the direction of chief physician Dr. T. Sarmilan, we cultivate traditional wellness and therapeutic
+        healing.
+      </p>
+    </div>
+
+    <!-- Column 2: Working Hours -->
+    <div class="footer-column">
+      <h3>Working Hours</h3>
+      <ul class="footer-hours-list">
+        <li><span>Monday</span> <span>04:00 PM – 06:00 PM</span></li>
+        <li><span>Tuesday</span> <span>04:00 PM – 06:00 PM</span></li>
+        <li><span>Wednesday</span> <span>04:00 PM – 06:00 PM</span></li>
+        <li><span>Thursday</span> <span>04:00 PM – 06:00 PM</span></li>
+        <li><span>Friday</span> <span style="color: #ff6b6b; font-weight: 700;">Closed (Leave)</span></li>
+        <li><span>Saturday</span> <span>04:00 PM – 06:00 PM</span></li>
+        <li><span>Sunday</span> <span>04:00 PM – 06:00 PM</span></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Contact & Address -->
+    <div class="footer-column">
+      <h3>Contact Information</h3>
+      <div class="footer-contact-info">
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>
+            Sellappa Siddha Ayurvedic Hospital,<br>
+            Kanthaswamy Kovilady, Inuvil,<br>
+            Jaffna, Sri Lanka.
+          </span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span>
+            Direct Hotline: <a href="tel:0770423696"
+              style="color: var(--color-accent); font-weight: 700;">0770423696</a>
+          </span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-user-doctor"></i>
+          <span>
+            Chief Consultant: <strong>Dr. T. Sarmilan</strong>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 Sellappa Siddha Ayurvedic Hospital. All Rights Reserved. Natural Healing and Rejuvenation.</p>
+    <div class="footer-bottom-links">
+      <a (click)="scrollTo('home')">Home</a>
+      <a (click)="scrollTo('about')">About Us</a>
+      <a (click)="scrollTo('treatments')">Treatments</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast Notifications -->
+<div class="toast-container">
+  <div *ngFor="let t of toasts" class="toast"
+    [style.border-left-color]="t.type === 'error' ? '#d90429' : 'var(--color-accent)'">
+    <i class="fa-solid" [class.fa-circle-check]="t.type === 'success'"
+      [class.fa-triangle-exclamation]="t.type === 'error'"></i>
+    <span>{{ t.message }}</span>
+  </div>
+</div>
